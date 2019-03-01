@@ -1,0 +1,4 @@
+#my repos {where you want repo installed, uri: address of repo, version}
+- git: {local-name: Project2,
+       uri: 'https://github.com/JBrad4d/Project2.git',
+       version: master}
