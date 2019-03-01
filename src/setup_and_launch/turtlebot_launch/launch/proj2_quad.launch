@@ -31,18 +31,18 @@
       <!-- Run the Joystick listener and control -->
       <group if="$(arg run_joystick)">
           <node name="joy" pkg="joy" type="joy_node">
-            <param name="dev" value="/dev/input/js2" />
+            <param name="dev" value="/dev/input/js0" />
           </node>
 
           <node name="teleop_joystick" pkg="controllers" type="multi_agent_joystick" output="screen">
-            <remap from="/cmd_vel" to="$(arg namespace)/cmd_accel" />
+            <remap from="/cmd_accel" to="$(arg namespace)/cmd_accel" />
           </node>
       </group>
 
       <!-- Run the keyboard control -->
       <node pkg="turtlebot3_teleop" type="turtlebot3_teleop_key" name="teleop_keyboard"  output="screen" unless="$(arg run_joystick)">
           <param name="model" value="$(arg model)" />
-          <remap from="/cmd_vel" to="$(arg namespace)/cmd_accel" />
+          <remap from="/cmd_accel" to="$(arg namespace)/cmd_accel" />
       </node>
   </group>
 

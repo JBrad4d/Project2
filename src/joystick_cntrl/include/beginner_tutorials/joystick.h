@@ -5,7 +5,7 @@
 #include "turtlesim/Pose.h"
 #include "sensor_msgs/Joy.h"
 
-#include "geometry_msgs/Twist.h"
+#include "geometry_msgs/Accel.h"
 
 class Joystick
 {
@@ -17,7 +17,7 @@ public:
     ros::NodeHandle n;
     ros::Publisher pub_command;
 
-    geometry_msgs::Twist cmd;
+    geometry_msgs::Accel cmd;
 
     void printMessage();
 
