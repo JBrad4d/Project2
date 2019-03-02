@@ -1,4 +1,4 @@
-# Visualization
+# Kinematic Model
 ## Installation and Usage
 1 - create a folder called "test" with a subfolder called src
 ```
